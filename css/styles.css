@@ -135,16 +135,13 @@ color: var(--ocean-color);
     display: block;
     width: 100%;
 
-
 bottom: 0;
 background: var(--ocean-color);
-
 }
 
 /* .line:hover::after, .line:focus::after  {
     visibility: visible;
 } */
-
 /* Коли буде додана сторінка CONTACTS потрібно буде додати до неї клас line у посилання */
 
 .header-list-menu {
@@ -609,6 +606,86 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .social-logo {fill: var(--cloud-color);
 }
 
+
+/* FORM - section */
+.form-container {
+    display: block;
+    position: relative;
+    width: 453px;
+    height: 80px;
+    margin-left: 80px;
+
+}
+
+.label-text {
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--white-color);
+}
+
+.span-form-footer {display: flex; 
+    padding-top: 16px;
+margin-right: 24px;
+
+width: 453px;
+height: 82px;
+}
+
+.input-email {
+    width: 264px;
+    height: 40px;
+
+    box-sizing: border-box;
+    border: 1px solid var(--white-color);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background-color: var(--navy-blue-color);
+color: var(--white-color);
+padding-left: 16px;
+}
+
+.input-email::placeholder {
+    font-weight: 400;
+font-size: 12px;
+line-height: 0.2;
+
+width: 36px;
+height: 24px;
+
+display: flex;
+align-items: center;
+letter-spacing: 0.04em;
+
+color: var(--white-color);
+}
+
+.button-form-send {
+    display: flex;
+    margin-left: 24px;
+    width: 165px;
+    height: 40px;
+    background-color: var(--iris-color);
+    border-radius: 4px;
+
+font-family: inherit;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: var(--white-color);
+
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+
+.telegram-logo {margin-left: 16px;}
+
     /* ----------- Portfolio Main -------------- */
 .portfolio-section {
     padding-bottom: 120px;
@@ -789,6 +866,8 @@ border-radius: 4px;
 
 padding-top: 24px;
 padding-right: 24px;
+padding-bottom: 24px;
+padding-left: 24px;
 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -834,3 +913,210 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 .modal-close:hover .icon-close-button, 
 .modal-close:focus .icon-close-button {
     fill: var(--white-color);}
+
+
+
+.form-modal-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+
+    position: relative;
+}
+
+.form-modal {
+    display: flex;
+flex-direction: column;
+
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+
+justify-content: center;
+text-align: center;
+letter-spacing: 0.02em;
+
+color: var(--navy-blue-color);
+
+
+}
+
+.label-modal {
+    margin-bottom: 8px; 
+    /* разом 16px, але пишу 8рх, бо від users-dates margin-top =8px */
+}
+
+.input-modal {
+    width: 360px;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 4px;
+
+
+padding-left: 38px;
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-modal:hover, .input-modal:focus {
+    border-color: var(--iris-color);
+}
+
+.input-modal:hover + .modal-form-input-icon {fill: var(--iris-color);}
+.input-modal:focus + .modal-form-input-icon {fill: var(--iris-color);}
+
+
+.svg-icon-form {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.modal-form-input-icon {
+    position:absolute;
+
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-modal {
+    width: 360px;
+height: 120px;
+
+border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 4px;
+padding-left: 16px;
+padding-right: 16px;
+padding-top: 8px;
+resize: none;
+
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea-modal::placeholder {
+    font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: rgba(46, 47, 66, 0.4);
+
+
+}
+
+.textarea-modal:hover {border-color: var(--iris-color);}
+.textarea-modal:focus {border-color: var(--iris-color);}
+
+.user-dates {display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 8px;
+margin-bottom: 4px;
+
+    font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+letter-spacing: 0.01em;
+height: 14px;
+
+color: var(--light-slate-color);
+}
+
+
+.button-form-wrapper {
+      display: flex;
+    flex-direction: row;
+    justify-content: center;
+align-items: center;
+padding-top: 24px;
+}
+
+.button-form-modal {
+    width: 169px;
+    height: 56px;
+    
+    background: var(--iris-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    
+
+
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+
+letter-spacing: 0.04em;
+color: var(--white-color);
+cursor: pointer;
+}
+
+.license-box {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    position: relative;
+
+}
+
+.checkbox-license {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    margin-right: 8px;
+ 
+    width: 16px;
+height: 16px;
+box-sizing: border-box;
+border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 2px;
+
+visibility: hidden;
+}
+
+.icon-check {fill: var(--cloud-color);
+}
+
+.span-icon-license {
+    display: flex;
+    justify-content: center;
+align-items: center;
+
+    position: absolute;
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 2px;
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.span-icon-license:hover 
+{ background-color: var(--ocean-color);}
+.span-icon-license:focus
+{ background-color: var(--ocean-color);}
+
+
+.license-text { display: flex;
+flex-direction: row;
+
+width: 338px;
+height: 16px;
+
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: var(--light-slate-color);
+}
+.privacy-policy-link {
+    margin-left: 2px;
+    font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: var(--iris-color);
+}
