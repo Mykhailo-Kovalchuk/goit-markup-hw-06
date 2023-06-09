@@ -627,7 +627,6 @@ gap: 24px;}
 .form-label-footer {
 }
 
-
 .input-email-footer {
     width: 264px;
     height: 40px;
@@ -647,7 +646,7 @@ color: var(--white-color);
 }
 
 .button-form-send {
-    width: 165px;
+    min-width: 165px;
     height: 40px;
 
     display: flex;
@@ -984,7 +983,7 @@ padding: 8px 16px;
 resize: none;
 outline: transparent;
 
-transition: transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-modal::placeholder {
 color: rgba(46, 47, 66, 0.4);
@@ -997,62 +996,52 @@ color: rgba(46, 47, 66, 0.4);
 
 .license-box {
     margin-bottom: 24px;
-    /* display: flex;
-    flex-direction: row;
-    padding-top: 16px;
-    position: relative; */
 }
 
-.checkbox-license { 
-    /* display: flex;
-    flex-direction: row;
-    justify-content: left;
 
-    margin-right: 8px;
- 
-    width: 16px;
-height: 16px;
-box-sizing: border-box;
-border: 1px solid rgba(46, 47, 66, 0.4);
-border-radius: 2px; */
-}
-.visually-hidden {
-
+.visually-hidden { 
+position: absolute;
+width: 1px;
+height: 1px;margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
 
-/* .icon-check {fill: var(--cloud-color);
-} */
-/* 
-.span-icon-license {
-    display: flex;
-    justify-content: center;
-align-items: center;
 
-    position: absolute;
-    width: 16px;
-    height: 16px;
-
-    border: 1px solid rgba(46, 47, 66, 0.4);
-border-radius: 2px;
-transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-} */
-
-/* .span-icon-license:hover 
-{ background-color: var(--ocean-color);}
-.span-icon-license:focus
-{ background-color: var(--ocean-color);} */
-
-
-.license-text { 
+.license-text { display: flex;
     font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 color: var(--light-slate-color);
 
+
+}
+
+.license-text span {
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.license-checkbox:checked + .license-text span {
+    background-color: var(--ocean-color);
+    fill: var(--white-color);
+    border: none;
+
 }
 
 .license-span {
+
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1064,11 +1053,6 @@ justify-content: center;
 fill: transparent;
 }
 
-/* Доробити пізніше
-Коли input у стані checked, для тега span у класі задано стиль background-color: в який записана css змінна зі значенням #404bbf; для зазначення фону
-Коли input у стані checked, для тега span у класі задано стиль border: none; для вимкнення стандартного оформлення кнопки
-Коли input у стані checked, для тега span у класі задано стиль fill: в який записана css змінна зі значенням #ffffff; для зазначення кольору іконки */
-
 
 .privacy-policy-link {
     margin-left: 2px;
@@ -1079,19 +1063,12 @@ letter-spacing: 0.04em;
 color: var(--iris-color);
 }
 
-/* .button-form-wrapper {
-      display: flex;
-    flex-direction: row;
-    justify-content: center;
-align-items: center;
-padding-top: 24px;
-} */
 
 .button-form-modal { display: block;
 
 margin-left: 96px;
 
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     
     background: var(--iris-color);
