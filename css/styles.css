@@ -1012,8 +1012,7 @@ overflow: hidden;
 }
 
 
-.license-text { display: flex;
-    font-size: 12px;
+.license-text {    font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 color: var(--light-slate-color);
